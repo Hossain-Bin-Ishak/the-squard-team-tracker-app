@@ -1,0 +1,13 @@
+.team-detail{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.team-detail-info{
+    
+    background-color: rgb(131, 221, 131);
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
