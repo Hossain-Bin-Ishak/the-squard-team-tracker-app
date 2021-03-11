@@ -6,14 +6,13 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
-import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
+import NoMatch from './Components/NoMatch/NoMatch';
 import TeamDetail from './Components/TeamDetail/TeamDetail';
 
 function App() {
   return (
    <Router>
-     <Header></Header>
      <Switch>
        <Route exact path='/'>
         <Home></Home>
@@ -24,6 +23,9 @@ function App() {
         <Route path='/team/:teamId'>
           <TeamDetail></TeamDetail>
         </Route>
+        <Route path="*">
+            <NoMatch></NoMatch>
+          </Route>
      </Switch>
    </Router>
   );
