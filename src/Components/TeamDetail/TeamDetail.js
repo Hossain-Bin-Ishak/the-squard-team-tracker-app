@@ -8,6 +8,7 @@ import Female from '../../Photo/female.png';
 import Facebook from '../../Icon/Facebook.png';
 import Twitter from '../../Icon/Twitter.png';
 import YouTube from '../../Icon/YouTube.png';
+import Website from '../../Icon/website.png';
 import TeamDetailHeader from '../TeamDetailHeader/TeamDetailHeader';
 
 const TeamDetail = () => {
@@ -29,14 +30,14 @@ const TeamDetail = () => {
                 <TeamDetailHeader> </TeamDetailHeader>
             </div>
             <div className="team-detail-info row m-2">
-                <div className="team-info-text col-md-6 mt-4">
+                <div className="team-info-text col-md-6 mt-4 order-sm-1 order-2">
                     <h1>{team.strTeam}</h1>
                     <p><b> <FontAwesomeIcon icon={faPodcast} /> Founded:</b> {team.intFormedYear}</p>
                     <p><b> <FontAwesomeIcon icon={faFlag} /> Country:</b> {team.strCountry}</p>
                     <p><b> <FontAwesomeIcon icon={faFutbol} /> Sports Type:</b> {team.strSport}</p>
                     <p><b> <FontAwesomeIcon icon={faMars} /> Gender:</b> {team.strGender}</p>
                 </div>
-                <div className="team-info-img col-md-6">
+                <div className="team-info-img col-md-6 col-sm-12 order-1">
                 
                     <img src={team.strGender==='Female'? Female : Male} alt='sports' />
 
@@ -56,6 +57,7 @@ const TeamDetail = () => {
 
                 <a href={`https://${team.strFacebook}`} target='_blank' rel="noreferrer"><img src={Facebook} alt="" /></a>
                 <a href={`https://${team.strYoutube}`} target='_blank' rel="noreferrer"><img src={YouTube} alt="" /></a>
+                <a herf={`https://${team.strWebsite}`} target='_blank' rel="noreferrer"><img src={Website} alt="" /></a>
                 <a herf={`https://${team.strTwitter}`} target='_blank' rel="noreferrer"><img src={Twitter} alt="" /></a>
 
             </div>

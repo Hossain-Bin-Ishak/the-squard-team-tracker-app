@@ -14,16 +14,19 @@ const TeamDetailHeader = () => {
                 console.log(data.teams[0]);
             })
     }, [teamId]);
-    return (
-        <div className='team-detail-header'>
-            <div className="header-dynamic-img">
-                <img src={team.strTeamBanner} alt="" />
-            </div>
-            <div className="dynamic-team-bagde">
-                <img src={team.strTeamBadge} alt="" />
-            </div>
 
+    return (
+        <div className='header-dynamic-img' style={{ 
+            backgroundImage: `url(${team.strTeamBanner})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}>
+           
+            <img src={team.strTeamBadge} alt="" />            
+           
         </div>
+
     );
 };
 
