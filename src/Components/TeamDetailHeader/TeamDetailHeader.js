@@ -23,7 +23,7 @@ const TeamDetailHeader = () => {
             backgroundPosition: 'center'
           }}>
            
-            <img src={team.strTeamBadge} alt="" />            
+            <img src={team.strTeamBadge} alt="Team Badge" />            
            
         </div>
 

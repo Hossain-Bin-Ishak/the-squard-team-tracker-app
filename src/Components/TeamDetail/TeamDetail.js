@@ -14,7 +14,7 @@ import TeamDetailHeader from '../TeamDetailHeader/TeamDetailHeader';
 const TeamDetail = () => {
     const { teamId } = useParams();
     const [team, setTeam] = useState([]);
-    console.log(team);
+
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`)
             .then(res => res.json())
@@ -23,7 +23,7 @@ const TeamDetail = () => {
                 console.log(data.teams[0]);
             })
     }, [teamId]);
-    console.log(team);
+
     return (
         <div className='team-detail container'>
             <div className="team-detail-header">
@@ -47,7 +47,7 @@ const TeamDetail = () => {
                 <div className="team-description col-md-12 text-justify">
                     <p><b>Stadium Description :</b> {team.strStadiumDescription}</p>
 
-                    <p>{team.strDescriptionES}</p>
+                    <p>{team.strDescriptionEN}</p>
 
                     <p>{team.strDescriptionES}</p>
                 </div>
