@@ -10,10 +10,10 @@ This a dynamic Team Tracker web application with some amazing and awesome featur
 You will get:
 
 - All team at a glace in the Home page.
-- Explore Option to get team details with dynamic feautures.
+- Explore Option to get team details with dynamic features.
 
 Test the Live App: https://the-squard-app.netlify.app/ 
-# # Web Techonology Uses
+# # Web Techonology Used
 
 - HtML5
 - CSS3

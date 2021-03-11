@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPodcast, faFlag, faFutbol, faMars } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from 'react-router';
 import './TeamDetail.css';
-import male from '../../Photo/male.png';
-import female from '../../Photo/female.png';
+import Male from '../../Photo/male.png';
+import Female from '../../Photo/female.png';
 import Facebook from '../../Icon/Facebook.png';
 import Twitter from '../../Icon/Twitter.png';
 import YouTube from '../../Icon/YouTube.png';
@@ -37,8 +37,9 @@ const TeamDetail = () => {
                     <p><b> <FontAwesomeIcon icon={faMars} /> Gender:</b> {team.strGender}</p>
                 </div>
                 <div className="team-info-img col-md-6">
-                    <img src={male} alt="" />
-                    {/* <img src={female} alt=""/> */}
+                
+                    <img src={team.strGender==='Female'? Female : Male} alt='sports' />
+
                 </div>
             </div>
             <div className='row'>
@@ -53,9 +54,9 @@ const TeamDetail = () => {
             </div>
             <div className="social-icon">
 
-                <a href={`https://${team.strFacebook}`} target='_blank'><img src={Facebook} alt="" /></a>
-                <a href={`https://${team.strYoutube}`} target='_blank'><img src={YouTube} alt="" /></a>
-                <a herf={`https://${team.strTwitter}`} target='_blank'><img src={Twitter} alt="" /></a>
+                <a href={`https://${team.strFacebook}`} target='_blank' rel="noreferrer"><img src={Facebook} alt="" /></a>
+                <a href={`https://${team.strYoutube}`} target='_blank' rel="noreferrer"><img src={YouTube} alt="" /></a>
+                <a herf={`https://${team.strTwitter}`} target='_blank' rel="noreferrer"><img src={Twitter} alt="" /></a>
 
             </div>
         </div>

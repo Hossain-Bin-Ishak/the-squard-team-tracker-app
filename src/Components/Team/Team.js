@@ -6,6 +6,8 @@ import { useHistory } from 'react-router';
 
 const Team = (props) => {
     const { strTeamBadge, strSport, idTeam } = props.team;
+    
+  
     const history = useHistory();
     const handleClick = (teamId) => {
         const url = `/team/${teamId}`;
@@ -17,8 +19,10 @@ const Team = (props) => {
                 <img src={strTeamBadge} alt="" />
 
                 <p><b>Sports Type:</b> {strSport}</p>
-                <button className='btn-primary btn-style'
-                    onClick={() => handleClick(idTeam)}
+                               <button className='btn-primary btn-style'
+                    onClick={
+                        () => handleClick(idTeam)                        
+                    }
                 >Explore <FontAwesomeIcon icon={faArrowRight} /></button>
 
             </div>
